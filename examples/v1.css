@@ -1,0 +1,149 @@
+/* Frozen v1 colours, kept so the gallery can show the previous palette beside the 2026 light and dark modes.
+   This file is not generated. Do not regenerate it from tokens.json. */
+
+.v1 {
+  --color-accent: #3e4c38;
+  --color-bg: #f3efe6;
+  --color-danger: #8d2c22;
+  --color-focus: #2c4530;
+  --color-ink: #1c1915;
+  --color-line: #8a8175;
+  --color-muted: #5c564e;
+  --color-on-accent: #f4f1e8;
+  --color-success: #21543c;
+  --color-surface: #faf8f4;
+  --color-warning: #7a4e0d;
+  --font-family-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-family-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-size-md: 1rem;
+  --font-size-sm: 0.875rem;
+}
+
+.v1-mirofish {
+  --color-accent: #c5d4a4;
+  --color-bg: #101412;
+  --color-danger: #f0b4ac;
+  --color-focus: #c5d4a4;
+  --color-ink: #e8f0ea;
+  --color-line: #6d7b73;
+  --color-muted: #a8b8ac;
+  --color-on-accent: #141a16;
+  --color-status-paper-bg: #e8f0ea;
+  --color-status-paper-fg: #101412;
+  --color-success: #9dccb0;
+  --color-surface: #1a201c;
+  --color-warning: #e7b98a;
+  --font-family-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.v1-eka-noe {
+  --color-accent: #d4b072;
+  --color-bg: #141310;
+  --color-danger: #f0b4ac;
+  --color-focus: #d4b072;
+  --color-ink: #f4efe6;
+  --color-line: #8a7d6c;
+  --color-muted: #a89c8c;
+  --color-on-accent: #1a160f;
+  --color-status-paper-bg: #f4efe6;
+  --color-status-paper-fg: #141310;
+  --color-success: #9dccb0;
+  --color-surface: #1e1c17;
+  --color-warning: #f0b089;
+  --font-family-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.v1-echo-oncology {
+  --color-accent: #1f4f52;
+  --color-bg: #f4f6f7;
+  --color-danger: #8d2c22;
+  --color-data-illustrative: #5c4a1e;
+  --color-data-illustrative-surface: #f3ead6;
+  --color-data-measured: #1a2330;
+  --color-focus: #1f4f52;
+  --color-ink: #1a2330;
+  --color-line: #7e8a90;
+  --color-muted: #4e5b6b;
+  --color-on-accent: #f4f6f7;
+  --color-status-research-bg: #1a2330;
+  --color-status-research-fg: #f4f6f7;
+  --color-success: #21543c;
+  --color-surface: #ffffff;
+  --color-warning: #7a4e0d;
+  --font-family-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.v1-electrascan {
+  --color-accent: #0e3a4d;
+  --color-bg: #f7f4ee;
+  --color-danger: #8a2e16;
+  --color-focus: #0e3a4d;
+  --color-hazard-bg: #f0c014;
+  --color-hazard-fg: #121212;
+  --color-ink: #121212;
+  --color-line: #7d776e;
+  --color-muted: #3a3a3a;
+  --color-on-accent: #f7f4ee;
+  --color-success: #21543c;
+  --color-surface: #ffffff;
+  --color-warning: #7a4e0d;
+  --font-family-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.375rem;
+  --font-size-xl: 1.75rem;
+}
+
+.v1-ember {
+  --color-accent: #1a120c;
+  --color-bg: #f6f3ef;
+  --color-danger: #8f2618;
+  --color-focus: #1a120c;
+  --color-ink: #1a120c;
+  --color-line: #7d756c;
+  --color-muted: #5c5148;
+  --color-on-accent: #f6f3ef;
+  --color-status-live-bg: #8f2618;
+  --color-status-live-fg: #fff8f5;
+  --color-status-simulated-bg: #fffdfb;
+  --color-status-simulated-fg: #1a120c;
+  --color-success: #1b5c40;
+  --color-surface: #fffdfb;
+  --color-warning: #7a4e0d;
+  --font-family-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.125rem;
+}
+
+.v1-matakite {
+  --color-accent: #7d3a2c;
+  --color-bg: #f5f3ee;
+  --color-danger: #8d2c22;
+  --color-focus: #7d3a2c;
+  --color-ink: #1e2836;
+  --color-line: #7c7870;
+  --color-muted: #4a5564;
+  --color-on-accent: #f5f3ee;
+  --color-series-a: #7d3a2c;
+  --color-series-b: #1f4f52;
+  --color-success: #21543c;
+  --color-surface: #fffcf8;
+  --color-warning: #7a4e0d;
+  --font-family-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.v1-the-bond {
+  --color-accent: #3e6248;
+  --color-bg: #f7f2ea;
+  --color-clay: #7a4636;
+  --color-danger: #8d2c22;
+  --color-focus: #3e6248;
+  --color-ink: #2c241c;
+  --color-line: #82796f;
+  --color-muted: #5e5348;
+  --color-on-accent: #f7f2ea;
+  --color-success: #21543c;
+  --color-surface: #fffaf4;
+  --color-warning: #7a4e0d;
+}
