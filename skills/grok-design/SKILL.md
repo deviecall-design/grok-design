@@ -29,8 +29,10 @@ Shared design source for Damien Callaghan's Deviecall ventures. Read this before
 ## Apply it
 
 - Foundations are the default. The kit file overrides only what it sets. A later value wins.
-- Ship colours from tokens. Do not add a hex, rgb, or hsl that the kit does not define.
+- Ship colours from tokens. The JSON values are OKLCH. Use the CSS variables. Do not add a hex, rgb, or hsl that the kit does not define.
 - In CSS, link **one** file: `kits/<venture>/tokens.css` (it already contains the merged foundations). For a foundations-only screen, link `foundations/tokens.css`.
+- Light is the default. Put `data-mode="dark"` on an ancestor for the dark mode, or `data-mode="light"` to force light. Omit `data-mode` and the kit follows the system theme.
+- `color.info` is informational text, never the accent. `color.viz.*` is the chart scale, and only Mirofish, Eka Noe, Echo Oncology, and Ember define one.
 - In Tailwind, use `foundations/tailwind.preset.cjs` and define the variables from that same CSS file. Utilities follow token names (`bg-bg`, `text-ink`, `border-line`). Spacing utilities are `p-s-1` … `p-s-9` so the preset does not replace Tailwind's numeric scale.
 - After editing token JSON, run `node foundations/build-tokens.mjs` and keep the generated CSS. Do not hand-edit generated files.
 - Follow the kit brief for labels: paper, simulated, live, measured, illustrative, research-use, hazard. The word is on the same surface as the data.

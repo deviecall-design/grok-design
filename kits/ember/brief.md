@@ -2,6 +2,10 @@
 
 Civil emergency response. Situational clarity comes before mood. The name is not a licence to draw flames, embers, or glow.
 
+## Palette
+
+The action colour is the ink in both modes, so a button cannot be red. Light is a warm field. Dark is a warm dark field, not a glow and not a blacked-out room. Live red, watch, and clear stay status colours. The chart scale is stone, ochre, pine, and steel, and it does not include the live red.
+
 ## Simulated and live
 
 Every screen that can show an exercise or a live incident states one of these words in a reserved region at the top of the surface:

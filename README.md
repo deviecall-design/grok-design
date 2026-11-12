@@ -11,7 +11,7 @@ v1 is a draft: tokens, rules, and a static specimen. It is not a component libra
 1. Read this file, then `anti-slop.md`, then `foundations/principles.md`.
 2. Read `skills/grok-design/SKILL.md` and follow it. The review pass is `skills/anti-slop/SKILL.md`, which applies `anti-slop.md`.
 3. Name the venture. Read `kits/<venture>/brief.md` and `kits/<venture>/tokens.json`. If the venture is unclear, ask. Do not guess.
-4. Style from tokens. Link one CSS file: `kits/<venture>/tokens.css` (foundations are already merged in). For a screen with no venture, link `foundations/tokens.css`.
+4. Style from tokens. Colours in the JSON are OKLCH. Link one CSS file: `kits/<venture>/tokens.css` (foundations are already merged in). For a screen with no venture, link `foundations/tokens.css`. That file sets light on `:root`, dark on `[data-mode="dark"]`, and also follows the system when `data-mode` is absent. Set `data-mode="light"` to keep light.
 5. Tailwind v3 can use `foundations/tailwind.preset.cjs`. The preset reads those CSS variables. Colour utilities follow token names (`bg-bg`, `text-ink`, `border-line`). Spacing utilities are `p-s-1` … `p-s-9`, so the preset does not replace Tailwind's own numeric scale. `size.touch` is `min-w-touch` and `min-h-touch`.
 
 Point Cursor, Claude Code, or a Grok bot at this repo. Skills live in `skills/<name>/SKILL.md` with `name` and `description` frontmatter. There is no installer.
@@ -26,7 +26,7 @@ To change a colour or a size, edit the JSON, then regenerate:
 node foundations/build-tokens.mjs
 ```
 
-The script has no dependencies. It writes the CSS and the Tailwind preset, and it fails if a declared text pair misses WCAG 2.2 AA (4.5:1 for text, 3:1 for lines and focus). Do not hand-edit generated files.
+The script has no dependencies. It turns each OKLCH colour into a hex fallback and an OKLCH custom property, writes light and dark, and fails if a declared pair misses WCAG 2.2 AA in either mode (4.5:1 for text, 3:1 for lines, focus, and chart marks). Do not hand-edit generated files. `examples/v1.css` is a frozen copy of the first palette and is not regenerated.
 
 ## Folder map
 
@@ -37,7 +37,8 @@ The script has no dependencies. It writes the CSS and the Tailwind preset, and i
 | `skills/anti-slop/` | Pointer to the review checklist |
 | `anti-slop.md` | The checklist itself |
 | `kits/<venture>/` | A short brief plus token overrides |
-| `examples/index.html` | One static gallery of every kit that has tokens |
+| `examples/index.html` | Gallery: v1 beside the 2026 light and dark mode of each kit |
+| `examples/v1.css` | Frozen first palette, for that comparison |
 | `REFERENCES.md` | Credits and links only. Nothing from those repos is copied here |
 | `LICENSE` | MIT |
 
@@ -68,7 +69,8 @@ The script has no dependencies. It writes the CSS and the Tailwind preset, and i
 ## Decisions in v1
 
 - W3C-style design tokens (`$value`, `$type`) are the source. CSS custom properties are what UI should consume.
-- One theme per kit. No second mode.
-- Mirofish and Eka Noe default to paper or simulated figures. Neither kit has a live-money colour.
-- Ember's action colour is black, so red stays reserved for the LIVE label.
+- Every kit has a light mode and a dark mode, including Electrascan and Ember. Dark is the same character, not a second brand.
+- Mirofish and Eka Noe default to paper or simulated figures. Neither kit has a live-money colour. Dark is their working terminal. Light is that terminal in daylight.
+- Ember's action colour is the ink, in both modes, so red stays reserved for the LIVE label.
+- Chart scales (`color.viz`) exist on Mirofish, Eka Noe, Echo Oncology, and Ember. `color.info` is a quiet steel, not a primary blue.
 - Generated CSS is committed, so the gallery works without a build. Re-run the script after token edits.

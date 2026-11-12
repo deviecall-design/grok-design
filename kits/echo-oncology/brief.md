@@ -2,6 +2,10 @@
 
 Clinical, calm, and honest. Information first. The screen should feel precise, not like a spa and not like an alarm.
 
+## Palette
+
+Near-neutral cool grey, with one slate-teal accent. Light is a clinical paper. Dark is a blue-black field, still calm. Illustrative content keeps a warm ground in both modes so it cannot sit on the measured surface. Chart series are teal, ink, clay, and slate. `color.info` stays a quiet steel.
+
 ## Labels
 
 Any screen that can be read as medical advice carries **Research use only**, in `color.status.research`, where the reader is looking. A footer line is not enough.

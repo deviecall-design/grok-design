@@ -2,6 +2,10 @@
 
 Pet wellness. Warm, quiet, and physical. A note about a specific animal, not a marketplace and not a clinic dashboard.
 
+## Palette
+
+Sage and clay on a cream that is warmer than Eka Noe's sand. Dark mode is a brown room, lighter and softer than Eka Noe's terminal black, and the accent stays green. Headings stay the serif. The two kits do not share a hue.
+
 ## Separate from Eka Noe
 
 Eka Noe is the investing terminal (`kits/eka-noe`). The Bond does not share its folder, tokens, type, or voice. Do not put a price, a P&L, or a "paper trading" label on a Bond screen. Do not put sage, clay, or the serif display onto Eka Noe.

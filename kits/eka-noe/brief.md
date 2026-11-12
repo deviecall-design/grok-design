@@ -2,6 +2,10 @@
 
 Dark, dense, terminal-style UI for inspecting paper and simulated markets. Warm black, brass used rarely, monospace figures.
 
+## Palette
+
+Warm ink and brass. The brass chroma stays low so it does not glow. Dark is the working terminal. Light is a dry sand field with dark brass text, still a terminal: no sage, no serif, not The Bond's cream. Chart series are brass, clay, olive, and stone. Clay here is a chart mark, not The Bond's material colour.
+
 ## Not The Bond
 
 The Bond is the pet wellness venture. It has its own folder and its own tokens (`kits/the-bond`). Eka Noe never shares a screen, a colour, a type stack, or a component with The Bond. Do not "soften" Eka Noe toward The Bond, and do not put market figures on a Bond screen.

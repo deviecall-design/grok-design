@@ -9,6 +9,7 @@ These bind every Deviecall venture. A kit may get stricter. It may not drop a ru
 5. **Quiet motion.** Durations come from the motion tokens and stay short. `prefers-reduced-motion: reduce` removes transitional motion.
 6. **System type, for now.** Families are system stacks, so a screen renders offline and this repo holds no font files and no font-service URLs. Do not import a webfont.
 7. **Qualities, not costumes.** The north star is premium and restrained: material honesty, weight, and calm, in the spirit of Aesop, Aman, and Dune. That sentence describes qualities. Do not put their names on a product, and do not copy their marks, logos, or assets.
-8. **Scope.** This kit is for Deviecall ventures only.
+8. **Two modes, one character.** Every kit has a light mode and a dark mode. Set `data-mode="light"` or `data-mode="dark"` on an ancestor. Leave it unset to follow the system. Alert colours stay alerts in both modes.
+9. **Scope.** This kit is for Deviecall ventures only.
 
-Token names use the CSS and W3C spelling `color`. Prose in this repo uses "colour".
+Colour tokens are OKLCH. The build writes a hex fallback, then the OKLCH for browsers that understand it. Token names use the CSS spelling `color`. Prose in this repo uses "colour".

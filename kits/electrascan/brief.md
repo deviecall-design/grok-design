@@ -2,6 +2,10 @@
 
 An Australian electrical trade tool. Practical, plain, and readable on site: sun, gloves, a quick glance.
 
+## Palette
+
+Both modes are built for legibility. Light is a cool instrument white for sun, distinct from the warmer v1 paper. Dark is for a dim board or a night callout, not a mood. Ink is near-black or near-white, muted stays strong, and the rules are heavy. The accent is a low-chroma navy, not a bright blue. Hazard yellow is the same band in both modes, with black text, and it is not a brand colour.
+
 ## Legibility
 
 Body is `font.size.md` (18px). Do not use `font.size.xs` in the product. Secondary text uses `color.muted`, which is intentionally dark. Rules use `color.line`, which is strong enough to see outdoors. Controls that are pressed are at least `size.touch` (44px) on both axes.

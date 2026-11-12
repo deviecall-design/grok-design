@@ -2,6 +2,10 @@
 
 Dark, dense, terminal-style UI for inspecting paper and simulated markets.
 
+## Palette
+
+Cool green-black in the dark, which is the working mode. Light is the same terminal on a mist paper, not the warm foundation stone. The accent is a quiet olive in both modes, and it is not a profit colour. Chart series stay inside olive, a cooler green, stone, and a dull steel. Gain and loss stay `color.success` and `color.danger`, always with a word.
+
 ## Intent
 
 A person is reading figures, not a brand story. The field is a cool green-black. Chrome is the sans body face. Prices, quantities, and identifiers are `font.family.mono` with tabular figures. The olive accent is rare: a selected control, not a wash, and not a synonym for profit.

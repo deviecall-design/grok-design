@@ -2,6 +2,10 @@
 
 Rugby analytics for performance staff. Dense enough to compare, quiet enough to read for a long session.
 
+## Palette
+
+Clay on warm paper, with navy ink rather than black. The second series is a deep teal. Dark mode is a navy night with warm paper text, not a black jersey and not silver. No NZRU, All Blacks, silver-fern, or team colour is used as the brand. The clay is the product's own.
+
 ## Branding boundary
 
 Do not use NZRU, the All Blacks, the silver fern, or any union, franchise, or team name, nickname, crest, or mark as branding or decoration. Do not imply an official partnership. Do not style the product as a black jersey with silver.
