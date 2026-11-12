@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deviecall design kits</title>
+  <link rel="stylesheet" href="../foundations/tokens.css">
+  <link rel="stylesheet" href="./kits.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--color-bg);
+      color: var(--color-ink);
+      font-family: var(--font-family-body);
+      font-size: var(--font-size-md);
+      font-weight: var(--font-weight-regular);
+      line-height: var(--font-leading-body);
+    }
+    .wrap {
+      max-width: 40rem;
+      margin: 0;
+      padding: var(--space-5) var(--space-4) var(--space-7);
+    }
+    @media (min-width: 800px) {
+      .wrap {
+        padding-left: var(--space-7);
+        padding-right: var(--space-7);
+      }
+    }
+    h1, h2, p { margin: 0; }
+    h1, h2 {
+      font-family: var(--font-family-display);
+      font-weight: var(--font-weight-regular);
+      letter-spacing: 0;
+      line-height: var(--font-leading-tight);
+    }
+    h1 { font-size: var(--font-size-3xl); }
+    h2 { font-size: var(--font-size-2xl); }
+    .stack > * + * { margin-top: var(--space-3); }
+    .muted { color: var(--color-muted); }
+    .id {
+      font-size: var(--font-size-sm);
+      color: var(--color-muted);
+    }
+    .mono {
+      font-family: var(--font-family-mono);
+      font-variant-numeric: tabular-nums lining-nums;
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 2px;
+    }
+    .swatches {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      list-style: none;
+      padding: 0;
+      margin: var(--space-4) 0 0;
+    }
+    .swatches li {
+      width: max-content;
+      max-width: 7.5rem;
+      font-size: var(--font-size-sm);
+      line-height: var(--font-leading-dense);
+      color: var(--color-muted);
+    }
+    .chip {
+      display: block;
+      width: 4.5rem;
+      height: 2.5rem;
+      margin-bottom: var(--space-1);
+      border: 1px solid var(--color-line);
+      background: var(--swatch, transparent);
+    }
+    .chip-bg { --swatch: var(--color-bg); }
+    .chip-surface { --swatch: var(--color-surface); }
+    .chip-ink { --swatch: var(--color-ink); }
+    .chip-muted { --swatch: var(--color-muted); }
+    .chip-line { --swatch: var(--color-line); }
+    .chip-accent { --swatch: var(--color-accent); }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .flag {
+      display: inline-block;
+      padding: var(--space-1) var(--space-2);
+      font-family: var(--font-family-body);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-medium);
+      line-height: var(--font-leading-dense);
+    }
+    .flag-paper {
+      background: var(--color-status-paper-bg);
+      color: var(--color-status-paper-fg);
+    }
+    .flag-research {
+      background: var(--color-status-research-bg);
+      color: var(--color-status-research-fg);
+    }
+    .flag-live {
+      background: var(--color-status-live-bg);
+      color: var(--color-status-live-fg);
+    }
+    .flag-sim {
+      background: var(--color-status-simulated-bg);
+      color: var(--color-status-simulated-fg);
+      border: 2px solid var(--color-ink);
+    }
+    .hazard {
+      margin: 0;
+      padding: var(--space-3) var(--space-4);
+      background: var(--color-hazard-bg);
+      color: var(--color-hazard-fg);
+      font-weight: var(--font-weight-medium);
+    }
+    .illustrative {
+      margin: 0;
+      padding: var(--space-3);
+      background: var(--color-data-illustrative-surface);
+      color: var(--color-data-illustrative);
+    }
+    .measured { color: var(--color-data-measured); }
+    .series {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      align-items: center;
+      margin: 0;
+    }
+    .bar {
+      display: inline-block;
+      width: var(--space-6);
+      height: var(--space-2);
+      margin-right: var(--space-2);
+      vertical-align: middle;
+    }
+    .bar-a { background: var(--color-series-a); }
+    .bar-b { background: var(--color-series-b); }
+    .band {
+      background: var(--color-bg);
+      color: var(--color-ink);
+      border-top: 1px solid var(--color-line);
+      font-family: var(--font-family-body);
+      font-size: var(--font-size-md);
+    }
+    .band .wrap { padding-top: var(--space-6); padding-bottom: var(--space-6); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition: none;
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap stack">
+    <p class="id">Deviecall · grok-design · v1</p>
+    <h1>Design kits</h1>
+    <p>A specimen of the shared tokens and each venture override. Not a component library. Nothing on this page is loaded from the network.</p>
+    <p class="muted">Source of truth is the JSON. This page only reads the generated CSS variables.</p>
+  </header>
+
+  <section class="band" aria-labelledby="foundations-title">
+    <div class="wrap stack">
+      <p class="id">foundations</p>
+      <h2 id="foundations-title">Foundations</h2>
+      <p>Warm paper, one olive accent, a quiet serif for short headings. Venture kits override this. Most product UI switches the heading face to the sans.</p>
+      <ul class="swatches">
+        <li><span class="chip chip-bg"></span>bg</li>
+        <li><span class="chip chip-surface"></span>surface</li>
+        <li><span class="chip chip-ink"></span>ink</li>
+        <li><span class="chip chip-muted"></span>muted</li>
+        <li><span class="chip chip-line"></span>line</li>
+        <li><span class="chip chip-accent"></span>accent</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band kit-mirofish" aria-labelledby="mirofish-title" style="color-scheme: dark">
+    <div class="wrap stack">
+      <p class="id">kits/mirofish</p>
+      <h2 id="mirofish-title">Mirofish</h2>
+      <p>Dark terminal for paper markets. Figures are monospace. Olive is a rare fill, not a profit colour.</p>
+      <p class="row"><span class="mono">SAMPLE 190.20</span> <span class="flag flag-paper">Paper</span></p>
+      <ul class="swatches">
+        <li><span class="chip chip-bg"></span>bg</li>
+        <li><span class="chip chip-surface"></span>surface</li>
+        <li><span class="chip chip-ink"></span>ink</li>
+        <li><span class="chip chip-accent"></span>accent</li>
+        <li><span class="chip chip-muted"></span>muted</li>
+        <li><span class="chip chip-line"></span>line</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band kit-eka-noe" aria-labelledby="eka-title" style="color-scheme: dark">
+    <div class="wrap stack">
+      <p class="id">kits/eka-noe</p>
+      <h2 id="eka-title">Eka Noe</h2>
+      <p>The other terminal. Warm black and brass. It does not share a screen with The Bond.</p>
+      <p class="row"><span class="mono">SAMPLE 190.20</span> <span class="flag flag-paper">Simulated</span></p>
+      <ul class="swatches">
+        <li><span class="chip chip-bg"></span>bg</li>
+        <li><span class="chip chip-surface"></span>surface</li>
+        <li><span class="chip chip-ink"></span>ink</li>
+        <li><span class="chip chip-accent"></span>accent</li>
+        <li><span class="chip chip-muted"></span>muted</li>
+        <li><span class="chip chip-line"></span>line</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band kit-echo-oncology" aria-labelledby="echo-title" style="color-scheme: light">
+    <div class="wrap stack">
+      <p class="id">kits/echo-oncology</p>
+      <h2 id="echo-title">Echo Oncology</h2>
+      <p>Clinical and calm. Measured numbers stay on the white surface. Illustrative content sits on the warm surface, in its own colour.</p>
+      <p><span class="flag flag-research">Research use only</span></p>
+      <p class="measured mono">Measured 6.2</p>
+      <p class="illustrative">Illustrative range, not a measurement.</p>
+      <ul class="swatches">
+        <li><span class="chip chip-bg"></span>bg</li>
+        <li><span class="chip chip-surface"></span>surface</li>
+        <li><span class="chip chip-ink"></span>ink</li>
+        <li><span class="chip chip-accent"></span>accent</li>
+        <li><span class="chip" style="--swatch: var(--color-data-illustrative-surface)"></span>note bg</li>
+        <li><span class="chip" style="--swatch: var(--color-data-illustrative)"></span>note ink</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band kit-electrascan" aria-labelledby="electra-title" style="color-scheme: light">
+    <div class="wrap stack">
+      <p class="id">kits/electrascan</p>
+      <h2 id="electra-title">Electrascan</h2>
+      <p>Site use. Large type, dark secondary text, and a hazard band that is only a hazard band.</p>
+      <p class="hazard">Hazard. Isolate supply.</p>
+      <p class="mono">230 V, 16 A</p>
+      <ul class="swatches">
+        <li><span class="chip chip-bg"></span>bg</li>
+        <li><span class="chip chip-ink"></span>ink</li>
+        <li><span class="chip chip-muted"></span>muted</li>
+        <li><span class="chip chip-accent"></span>accent</li>
+        <li><span class="chip" style="--swatch: var(--color-hazard-bg)"></span>hazard</li>
+        <li><span class="chip chip-line"></span>line</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band kit-ember" aria-labelledby="ember-title" style="color-scheme: light">
+    <div class="wrap stack">
+      <p class="id">kits/ember</p>
+      <h2 id="ember-title">Ember</h2>
+      <p>Civil response. Clarity over mood. The two labels below are alternatives. A screen shows the one that is true, in a reserved region.</p>
+      <p class="row">
+        <span class="flag flag-sim">Simulated</span>
+        <span class="flag flag-live">Live</span>
+      </p>
+      <p class="muted">Watch, act, and clear are words as well as colours. Red is not a button.</p>
+      <ul class="swatches">
+        <li><span class="chip chip-bg"></span>bg</li>
+        <li><span class="chip chip-ink"></span>ink</li>
+        <li><span class="chip" style="--swatch: var(--color-status-live-bg)"></span>live</li>
+        <li><span class="chip" style="--swatch: var(--color-warning)"></span>watch</li>
+        <li><span class="chip" style="--swatch: var(--color-success)"></span>clear</li>
+        <li><span class="chip chip-line"></span>line</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band kit-matakite" aria-labelledby="matakite-title" style="color-scheme: light">
+    <div class="wrap stack">
+      <p class="id">kits/matakite</p>
+      <h2 id="matakite-title">Matakite</h2>
+      <p>Rugby analytics. Original clay and teal. Do not use NZRU, All Blacks, silver-fern, or team marks or names as branding.</p>
+      <p class="series"><span><span class="bar bar-a"></span>Series A</span> <span><span class="bar bar-b"></span>Series B</span></p>
+      <p class="mono">00:00 home 0, away 0</p>
+      <ul class="swatches">
+        <li><span class="chip chip-bg"></span>bg</li>
+        <li><span class="chip chip-ink"></span>ink</li>
+        <li><span class="chip chip-accent"></span>accent</li>
+        <li><span class="chip" style="--swatch: var(--color-series-b)"></span>series b</li>
+        <li><span class="chip chip-muted"></span>muted</li>
+        <li><span class="chip chip-line"></span>line</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band kit-the-bond" aria-labelledby="bond-title" style="color-scheme: light">
+    <div class="wrap stack">
+      <p class="id">kits/the-bond</p>
+      <h2 id="bond-title">The Bond</h2>
+      <p>Pet wellness. Serif headings, sage, a little clay. Its own folder and tokens, kept apart from Eka Noe.</p>
+      <p>Recorded weight, 18.4 kg, 2 March.</p>
+      <ul class="swatches">
+        <li><span class="chip chip-bg"></span>bg</li>
+        <li><span class="chip chip-surface"></span>surface</li>
+        <li><span class="chip chip-ink"></span>ink</li>
+        <li><span class="chip chip-accent"></span>sage</li>
+        <li><span class="chip" style="--swatch: var(--color-clay)"></span>clay</li>
+        <li><span class="chip chip-line"></span>line</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="band">
+    <div class="wrap stack">
+      <p class="id">kits/pleo</p>
+      <p>Pleo is deprioritised and has no tokens. Ask before designing it.</p>
+      <p class="muted"><a href="../README.md">README</a> · <a href="../anti-slop.md">Anti-slop</a> · <a href="../REFERENCES.md">References</a></p>
+    </div>
+  </footer>
+</body>
+</html>
